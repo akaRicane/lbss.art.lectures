@@ -1,3 +1,5 @@
+import Slide from "./Slide.js";
+
 export default class HorizontalSlide {
   constructor() {
     this.main = document.createElement("section");
@@ -15,10 +17,10 @@ export default class HorizontalSlide {
   /**
    * Append a vertical slide to the horizontal slide
    *
-   * @param {HTMLElement} slide
+   * @param {Slide} slide
    * @returns {void}
    */
   addSlide(slide) {
-    this.main.appendChild(slide);
+    this.main.appendChild(slide.get());
   }
 }

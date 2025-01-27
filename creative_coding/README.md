@@ -1,0 +1,38 @@
+- Intro [5m]
+  - qui sommes nous tres rapidement en tant qu'humains
+  - c'est quoi le cc ?
+    - moteurs graphiques
+    - applications
+  - overview des outils du creative coding
+    - noise
+    - shaders
+    - mesh
+    - assets
+    - IO
+- Meshes [5m]
+  - partir d'un simple mesh
+  - mesh 3D
+  - déformations
+  - field generation ?
+  - ouverture potentielle
+    - shadering examples avec shader, png etc
+    - substance painter like blender assemblage 3D
+- Textures et shaders [5m]
+  - c'est quoi un shader
+  - glsl
+  - outils
+    - fbm
+    - noises
+    - ...
+  - intégration dans JS
+- Comment on code & ASTAR [5m]
+- Demos en vrac [10m]
+- Going further [5m]
+  - scénographie
+    - LED
+    - BILd
+  - installations physiques
+    - Webgazer
+- Et lbss dans tout ca [5m]
+  - projets / dates réalisés
+  - ambition de créer des shows customs pour artistes + installations artistiques
