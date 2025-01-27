@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo p5.js</title>
+    <title>Mesh / Intro</title>
 
     <style>
       body {
@@ -18,10 +18,12 @@
         overflow: hidden;
       }
     </style>
-
-    <script src="../../externalLibs/p5/p5.js"></script>
   </head>
   <body>
-    <script src="./sketch.js"></script>
+    <script type="module">
+      import * as THREE from "../../../externalLibs/three/src/Three.js";
+      window.THREE = THREE;
+    </script>
+    <script type="module" src="./sketch.js"></script>
   </body>
 </html>
