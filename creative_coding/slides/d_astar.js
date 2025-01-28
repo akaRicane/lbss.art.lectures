@@ -1,5 +1,4 @@
 import HorizontalSlide from "../js/custom/HorizontalSlide.js";
-import SlideCode from "../js/custom/SlideCode.js";
 import SlideText from "../js/custom/SlideText.js";
 
 const astar = new HorizontalSlide();
@@ -56,16 +55,6 @@ astar.addSlide(
     <li>Printemps 2024: redeveloppement de zéro pour optimiser et fixer les core-issues</li>
     <li>Janvier 2025: redeveloppement de zéro en rust</li>
   </ul>
-  `)
-);
-
-astar.addSlide(
-  new SlideCode(`
-  (def lazy-fib
-  (concat
-   [0 1]
-   ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
   `)
 );
 

@@ -1,3 +1,4 @@
+import { ASSETS_ROOT_PATH } from "../globals.js";
 import HorizontalSlide from "../js/custom/HorizontalSlide.js";
 import SlideImage from "../js/custom/SlideImage.js";
 import SlideText from "../js/custom/SlideText.js";
@@ -45,6 +46,8 @@ outro.addSlide(
 
 outro.addSlide(new SlideVideo("C0405.mov")); // camille visages paulo
 
+outro.addSlide(new SlideVideo(`flagada_record.mov`));
+
 outro.addSlide(
   new SlideText(`
     <p>example Webgazer</p>
@@ -75,8 +78,25 @@ outro.addSlide(new SlideVideo("IMG_4339.mov")); // DOUR
 
 outro.addSlide(
   new SlideText(`
-  <h2>Questions?</h2>
-  <p>lbss.art</p>
+  <h2>Où commencer ?</h2>
+  <ul>
+    <li>p5 et p5 web editor</li>
+    <li>Youtube: D. Shiffman / The coding train</li>
+    <li>Open Processing</li>
+    <li>Shadertoy</li>
+    <li>The book of shaders</li>
+    <li>GLSL Sandbox</li>
+  </ul>
+`)
+);
+
+outro.addSlide(
+  new SlideText(`
+  <h2>Merci</h2>
+  <p>www.lbss.art</p>
+  <p>@lbss.art</p>
+  <p>contact@lbss.art</p>
+  <img style="width: 25%;" src="${ASSETS_ROOT_PATH}/lbss-art-logo.png"></img>
 `)
 );
 

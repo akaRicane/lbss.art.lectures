@@ -1,6 +1,6 @@
+import { ASSETS_ROOT_PATH } from "../globals.js";
 import HorizontalSlide from "../js/custom/HorizontalSlide.js";
 import SlideText from "../js/custom/SlideText.js";
-import SlideVideo from "../js/custom/SlideVideo.js";
 
 const introduction = new HorizontalSlide();
 
@@ -8,7 +8,7 @@ introduction.addSlide(
   new SlideText(`
   <h2>Creative coding</h2>
   <p>Introduction</p>
-  <p>lbss.art</p>
+  <img style="width: 25%;" src="${ASSETS_ROOT_PATH}/lbss-art-logo.png"></img>
 `)
 );
 
@@ -53,7 +53,5 @@ introduction.addSlide(
   </ul>
 `)
 );
-
-introduction.addSlide(new SlideVideo(`flagada_record.mov`));
 
 export default introduction;

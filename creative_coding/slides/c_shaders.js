@@ -1,5 +1,6 @@
 import { ASSETS_ROOT_PATH } from "../globals.js";
 import HorizontalSlide from "../js/custom/HorizontalSlide.js";
+import SlideCode from "../js/custom/SlideCode.js";
 import SlideText from "../js/custom/SlideText.js";
 
 const shaders = new HorizontalSlide();
@@ -57,7 +58,7 @@ right.style.display = "flex";
 right.style.flexDirection = "column";
 
 const titleRight = document.createElement("p");
-titleRight.textContent = "SBF: Signed Distance Function";
+titleRight.textContent = "SDF: Signed Distance Function";
 
 right.appendChild(titleRight);
 
@@ -73,5 +74,51 @@ shaders.addCustomSection(custom);
 
 // shaders.addSlide(new SlideImage("fbm.png"), "FBM: Fractal Brownian Motion");
 // shaders.addSlide(new SlideImage("sbf.png"), "SBF: Signed Distance Function");
+
+const sphereCode = `
+  float geometry1( vec3 p, float s )
+{
+  return length(p)-s;
+}`;
+
+shaders.addSlide(new SlideCode(sphereCode));
+
+const answerSphere = document.createElement("div");
+answerSphere.style.display = "flex";
+answerSphere.style.flexDirection = "row";
+// answerSphere.style.justifyContent = "space-around";
+
+const leftSphereAnswer = document.createElement("div");
+leftSphereAnswer.style.minWidth = "75%";
+leftSphereAnswer.innerHTML = `<pre><code data-trim data-noescape>${sphereCode}</code></pre>`;
+const imgSphereAnswer = document.createElement("img");
+imgSphereAnswer.src = ASSETS_ROOT_PATH + "/sphere.png";
+answerSphere.appendChild(leftSphereAnswer);
+answerSphere.appendChild(imgSphereAnswer);
+
+shaders.addCustomSection(answerSphere);
+
+const boxCode = `
+  float geometry2( vec3 p, vec3 b )
+{
+  vec3 q = abs(p) - b;
+  return length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0);
+}`;
+
+shaders.addSlide(new SlideCode(boxCode));
+
+const answerBox = document.createElement("div");
+answerBox.style.display = "flex";
+answerBox.style.flexDirection = "row";
+// answerBox.style.justifyContent = "space-around";
+
+const leftBoxAnswer = document.createElement("div");
+leftBoxAnswer.innerHTML = `<pre><code data-trim data-noescape>${boxCode}</code></pre>`;
+const imgBoxAnswer = document.createElement("img");
+imgBoxAnswer.src = ASSETS_ROOT_PATH + "/box.png";
+answerBox.appendChild(leftBoxAnswer);
+answerBox.appendChild(imgBoxAnswer);
+
+shaders.addCustomSection(answerBox);
 
 export default shaders;

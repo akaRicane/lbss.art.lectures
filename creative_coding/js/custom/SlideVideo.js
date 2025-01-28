@@ -5,7 +5,10 @@ export default class SlideVideo extends Slide {
   constructor(video) {
     super();
     this.slide = document.createElement("section");
-    this.slide.style.maxHeight = "90%";
+    this.slide.style.display = "flex";
+    this.slide.style.alignItems = "center";
+    this.slide.style.justifyContent = "center";
+    this.slide.style.height = "100%"; // Ensure the parent takes full height
 
     this.videoPath = `${ASSETS_ROOT_PATH}/${video}`;
 
@@ -14,11 +17,7 @@ export default class SlideVideo extends Slide {
     this.video.controls = true;
     this.video.muted = true;
     this.video.autoplay = true;
-
-    // Add CSS styles to make the video responsive
-    this.video.style.width = "auto";
-    this.video.style.maxHeight = "100%";
-    this.video.style.height = "100%";
+    this.video.style.height = "100%"; // Make the video fit the parent vertically
 
     this.slide.appendChild(this.video);
   }
