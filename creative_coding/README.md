@@ -33,6 +33,6 @@
     - BILd
   - installations physiques
     - Webgazer
-- Et lbss dans tout ca [5m]
-  - projets / dates réalisés
-  - ambition de créer des shows customs pour artistes + installations artistiques
+  - Et lbss dans tout ca [5m]
+    - projets / dates réalisés
+    - ambition de créer des shows customs pour artistes + installations artistiques
