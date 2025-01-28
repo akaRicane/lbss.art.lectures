@@ -23,4 +23,10 @@ export default class HorizontalSlide {
   addSlide(slide) {
     this.main.appendChild(slide.get());
   }
+
+  addCustomSection(customSection) {
+    const section = document.createElement("section");
+    section.appendChild(customSection);
+    this.main.appendChild(section);
+  }
 }

@@ -1,5 +1,6 @@
 import HorizontalSlide from "../js/custom/HorizontalSlide.js";
 import SlideText from "../js/custom/SlideText.js";
+import SlideVideo from "../js/custom/SlideVideo.js";
 
 const introduction = new HorizontalSlide();
 
@@ -52,5 +53,7 @@ introduction.addSlide(
   </ul>
 `)
 );
+
+introduction.addSlide(new SlideVideo(`flagada_record.mov`));
 
 export default introduction;

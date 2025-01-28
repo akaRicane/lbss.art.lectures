@@ -69,6 +69,7 @@ outro.addSlide(new SlideVideo("IMG_2541.mov")); // nexus x vscode
 outro.addSlide(new SlideImage("technopolice.png"));
 
 outro.addSlide(new SlideVideo("IMG_3031.mov")); // arena toulouse
+outro.addSlide(new SlideVideo("story-le-wanski-dour.mov")); // teaser dour
 outro.addSlide(new SlideImage("setup_dour.png"));
 outro.addSlide(new SlideVideo("IMG_4339.mov")); // DOUR
 
